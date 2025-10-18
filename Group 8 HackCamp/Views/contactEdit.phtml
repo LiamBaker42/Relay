@@ -1,0 +1,48 @@
+<?php include 'template/header.phtml'; ?>
+<!-- Page Content -->
+<div class="container mt-5">
+    <h2 class="text-center text-primary mb-4"><i class="fa fa-user-plus"></i> <?= $contact ? 'Edit Contact' : 'Add New Contact' ?></h2>
+    <p class="text-center text-muted">Welcome! Please fill out the form below to add a new contact.</p>
+
+    <!-- Contact Form -->
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <form method="POST" action="/contactEdit.php" class="p-4 border rounded shadow-sm bg-light">
+                <?php if ($contactId): ?>
+                    <input type="hidden" name="contactId" value="<?= htmlspecialchars($contactId) ?>">
+                <?php endif; ?>
+
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name" class="font-weight-bold">Name:</label>
+                    <input  class="form-control" type="text" name="name" id="name" value="<?= htmlspecialchars($contact['Name'] ?? '') ?>"  required>
+                </div>
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="number" class="font-weight-bold">Phone Number:</label>
+                    <input class="form-control" type="text" name="number" id="number" value="<?= htmlspecialchars($contact['Number'] ?? '') ?>"required>
+                </div>
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="email" class="font-weight-bold">Email:</label>
+                    <input class="form-control" type="email" name="email" id="email" value="<?= htmlspecialchars($contact['Email'] ?? '') ?>" required>
+                </div>
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" name="save_contact" class="btn btn-primary btn-block">Submit</button>
+
+                    <?php if ($contact): ?>
+                        <!-- Delete Button for editing contact -->
+                        <form method="POST" action="/contactEdit.php" style="margin-top: 20px;">
+                            <?php if ($contactId): ?>
+                                <input type="hidden" name="contactId" value="<?= htmlspecialchars($contactId) ?>">
+                            <?php endif; ?>
+                            <button type="submit" name="delete_contact" class="delete-contact-btn" onclick="return confirm('Are you sure you want to delete this contact?');">Delete Contact</button>
+                        </form>
+                    <?php endif; ?>
+            </form>
+        </div>
+    </div>
+</div>
+<?php include 'template/footer.phtml'; ?>

@@ -1,0 +1,67 @@
+<?php include 'views/template/header.phtml'; ?>
+
+<div class="container">
+    <!-- Contacts Search Section -->
+    <div class="contacts-search-section">
+        <h2>Search Contacts</h2>
+        <form method="get" class="contacts-search-form">
+            <!-- Preserve the event ID in the URL -->
+            <input type="hidden" name="id" value="<?= htmlspecialchars($viewData['eventId']) ?>">
+            <input
+                    type="text"
+                    name="search"
+                    placeholder="Search contacts"
+                    value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>"
+                    class="search-input"
+            >
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <!-- Contacts List Section -->
+    <div class="contacts-list-section">
+        <h2>Contacts Available for Event</h2>
+        <ul class="contacts-list">
+            <?php if (!empty($viewData['contactList'])): ?>
+                <?php foreach ($viewData['contactList'] as $contact): ?>
+                    <li class="contacts-item">
+                        <span><?= htmlspecialchars($contact['Name']) ?></span>
+                        <form method="post" class="add-contact-form">
+                            <input type="hidden" name="contactId" value="<?= $contact['ContactID'] ?>">
+                            <button type="submit" name="addContact" class="btn btn-success">Add to Event</button>
+                        </form>
+                    </li>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p class="no-contacts-message">No contacts found.</p>
+            <?php endif; ?>
+        </ul>
+    </div>
+</div>
+
+<div class="pagination">
+    <?php if ($page > 1): ?>
+        <a href="?id=<?= htmlspecialchars($eventId) ?>&page=1">First</a>
+        <a href="?id=<?= htmlspecialchars($eventId) ?>&page=<?= $page - 1 ?>">Previous</a>
+    <?php endif; ?>
+
+    <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+        <a href="?id=<?= htmlspecialchars($eventId) ?>&page=<?= $i ?>" class="<?= $i == $page ? 'active' : '' ?>"><?= $i ?></a>
+    <?php endfor; ?>
+
+    <?php if ($page < $totalPages): ?>
+        <a href="?id=<?= htmlspecialchars($eventId) ?>&page=<?= $page + 1 ?>">Next</a>
+        <a href="?id=<?= htmlspecialchars($eventId) ?>&page=<?= $totalPages ?>">Last</a>
+    <?php endif; ?>
+
+    <!-- Page Input -->
+    <form action="" method="get" class="page-input-form" style="display: inline;">
+        <label for="page-input">Go to page:</label>
+        <input type="number" id="page-input" name="page" min="1" max="<?= $totalPages ?>" value="<?= $page ?>" required>
+        <input type="hidden" name="id" value="<?= htmlspecialchars($eventId) ?>">
+        <button type="submit">Go</button>
+    </form>
+</div>
+
+
+<?php include 'views/template/footer.phtml'; ?>
