@@ -1,0 +1,29 @@
+<?php include 'views/template/header.phtml'; ?>
+
+<body>
+<div class="search-container">
+    <form method="get" action="facilities.php">
+        <input class="search-input" type="text" id="search" name="search" placeholder="Search facilities" value="<?= htmlspecialchars($searchQuery) ?>">
+        <button class="search-button" type="submit">Search</button>
+    </form>
+</div>
+<div class="container">
+    <div class="facilities-list">
+        <h1>Facilities</h1>
+        <ul>
+            <?php if (!empty($facilities)): ?>
+                <?php foreach ($facilities as $facility): ?>
+                    <li class="facility-item">
+                        <strong class="facility-name"><?= htmlspecialchars($facility['Name']) ?></strong><br>
+                        <small class="facility-address"><?= htmlspecialchars($facility['Address']) ?></small><br>
+                        <span class="facility-number"><?= htmlspecialchars($facility['Number']) ?></span><br>
+                        <a class="facility-email" href="mailto:<?= htmlspecialchars($facility['Email']) ?>"><?= htmlspecialchars($facility['Email']) ?></a>
+                    </li>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p class="no-results">No facilities found.</p>
+            <?php endif; ?>
+        </ul>
+    </div>
+</div>
+<?php include 'views/template/footer.phtml'; ?>

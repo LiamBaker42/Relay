@@ -1,0 +1,1633 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 5vw;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+nav ul {
+    list-style: none;
+    background: #0056b3;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.container {
+    max-width: 70%;
+    /* Set width to 70% of the screen width */
+    margin: 20px auto;
+    /* Center the container */
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    /* Add border around the container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the form */
+.search {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* Ensure the search container is centered and takes up 75% width */
+/* Container for search bar */
+.search-container {
+    display: inline;
+    /* Ensures input and button are inline */
+    justify-content: center;
+    /* Centers the form */
+    width: 75%;
+    /* Form width */
+    margin: 20px auto;
+    /* Centers form horizontally */
+}
+
+/* Style for the input field */
+.search-container input[type="text"] {
+    width: 40%;
+    /* Input takes 80% of the width */
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+    /* Space between input and button */
+    margin-left: 27vw;
+}
+
+/* Style for the submit button */
+.search-container button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* Style the search input */
+.search input[type="text"] {
+    width: 80%;
+    /* Adjusts width of the input */
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Style the search button */
+.search button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    /* Set the background color */
+    color: white;
+    /* Set text color to white */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth color transition */
+}
+
+.search button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Darker color on hover */
+}
+
+.search button[type="submit"]:active {
+    background-color: #004085;
+    /* Even darker on click */
+}
+
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Form Elements */
+form {
+    margin: 20px 0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Specific Page Styles */
+/* Staff List */
+.staff-list ul {
+    list-style: none;
+}
+
+.staff-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Staff Detail and Contact Pages */
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+.detail-section p {
+    margin: 5px 0;
+}
+
+/* Staff Details Page Styles */
+.staff-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.staff-info {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.staff-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-item {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.conversation-count {
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-item:hover {
+    background-color: #f1f1f1;
+}
+
+.contact-item a {
+    margin-right: 10px;
+}
+
+/* New Staff Button */
+.new-staff-container {
+    display: flex;
+    justify-content: center;
+    /* Center the button */
+    margin-bottom: 10px;
+}
+
+.new-staff-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.new-staff-button:hover {
+    background-color: #45a049;
+}
+
+/* Update Button */
+.update-button {
+    padding: 5px 10px;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.update-button:hover {
+    background-color: #1976D2;
+}
+
+/* Contact Details Page Styles */
+.contact-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.conversation-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.conversation-item {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.conversation-item strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.conversation-item br {
+    margin-bottom: 5px;
+}
+
+/* Page-Specific Styling for Staff Edit Page */
+
+/* Staff Edit Page Container */
+.staff-edit-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.staff-edit-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.staff-edit-container label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.staff-edit-container input[type="text"],
+.staff-edit-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.staff-edit-container button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.staff-edit-container button:hover {
+    background-color: #0056b3;
+}
+
+/* General container for buttons */
+.add-contact-btn-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+/* Contact list styling */
+.contacts-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.conversation-count {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Button styles */
+.add-contact-btn,
+.edit-contact-btn,
+.delete-contact-btn {
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.add-contact-btn:hover,
+.edit-contact-btn:hover,
+.delete-contact-btn:hover {
+    background-color: #45a049;
+    /* Slightly darker green when hovered */
+}
+
+/* Delete Button */
+.delete-contact-btn {
+    background-color: red;
+}
+
+.delete-contact-btn:hover {
+    background-color: darkred;
+}
+
+/* Position the Add Conversation button in the top right */
+.add-conversation-button-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.add-conversation-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.add-conversation-button:hover {
+    background-color: #45a049;
+}
+
+/* Style for the edit button */
+.edit-conversation-button {
+    padding: 5px 10px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.edit-conversation-button:hover {
+    background-color: #fb8c00;
+}
+
+.last-contacted {
+    font-style: italic;
+    color: #555;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.edit-contact-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.edit-contact-btn:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+    text-decoration: none;
+    /* Remove underline on hover */
+}
+
+/* ============================================
+   Events Overview Page Styling
+============================================ */
+.events-overview-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.events-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-item {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    gap: 20px;
+}
+
+.event-staff,
+.event-details,
+.event-contacts {
+    flex: 1;
+}
+
+.event-staff ul,
+.event-contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event-staff ul li,
+.event-contacts ul li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.event-staff h3,
+.event-details h3,
+.event-contacts h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.event-details {
+    text-align: center;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+.event-details h3 {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.event-details p {
+    font-size: 14px;
+    color: #555;
+}
+
+.event-contacts small {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Container styles for better alignment */
+.event-details ul {
+    list-style-position: inside;
+    /* Ensures the bullet is aligned with the text */
+    margin: 0;
+    /* Removes default margin */
+    padding: 0;
+    /* Removes default padding */
+}
+
+/* Individual bullet point styles */
+.event-details ul li {
+    margin-left: 1rem;
+    /* Adds some indentation to the bullet list */
+    padding: 0.2rem 0;
+    /* Adds a bit of spacing between list items */
+    font-size: 1rem;
+    /* Adjusts the font size for readability */
+}
+
+/* Optional: Add a subtle color or style for the bullets */
+.event-details ul {
+    list-style-type: disc;
+    /* Default disc style, but you can change this to circle or square */
+    color: #333;
+    /* Matches the text color for bullets */
+}
+
+/* Event Edit Page Styles */
+.event-edit-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.event-input,
+.event-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.event-textarea {
+    height: 150px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.goal-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.goal-input {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 1rem;
+    margin-right: 8px;
+}
+
+.goal-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.goal-button:hover {
+    background-color: #e63946;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-actions button {
+    margin-right: 10px;
+}
+
+
+/* Center the Create New Event button */
+.create-event-button {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-event-button .btn-success {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.create-event-button .btn-success:hover {
+    background-color: #218838;
+}
+
+/* Event Overview Container */
+.events-overview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Event Item Layout */
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Left: Staff Section */
+.event-staff {
+    width: 30%;
+}
+
+.event-staff h3 {
+    margin-bottom: 10px;
+}
+
+.event-staff ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.event-staff li {
+    margin-bottom: 5px;
+}
+
+.add-staff-button {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.add-staff-button .btn-secondary {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-staff-button .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Center: Event Details Section */
+.event-details {
+    width: 40%;
+}
+
+.event-details h3 {
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    margin-bottom: 10px;
+}
+
+.event-details h4 {
+    margin-top: 10px;
+}
+
+.edit-event-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.edit-event-button .btn-primary {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit-event-button .btn-primary:hover {
+    background-color: #0069d9;
+}
+
+/* Right: Contacts Section */
+.event-contacts {
+    width: 30%;
+}
+
+.event-contacts h3 {
+    margin-bottom: 10px;
+}
+
+.event-contacts ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.event-contacts li {
+    margin-bottom: 5px;
+}
+
+.add-contact-button {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.add-contact-button .btn-secondary {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-contact-button .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-item {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .event-staff,
+    .event-details,
+    .event-contacts {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .create-event-button .btn-success {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .add-staff-button .btn-secondary,
+    .add-contact-button .btn-secondary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .edit-event-button .btn-primary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* General Page Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Section Titles */
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Search Section */
+.staff-search-section,
+.contacts-search-section {
+    margin-bottom: 30px;
+}
+
+.staff-search-form,
+.contacts-search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Staff/Contacts List */
+.staff-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.staff-item,
+.contacts-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.staff-item span,
+.contacts-item span {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* No Staff/Contacts Message */
+.no-staff-message,
+.no-contacts-message {
+    color: #777;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* General Styles */
+.event-details {
+    margin-bottom: 20px;
+}
+
+/* Completed tasks - Green */
+.completed {
+    color: green;
+    font-weight: bold;
+}
+
+/* Overdue tasks - Red */
+.overdue {
+    color: red;
+    font-weight: bold;
+}
+
+/* Days to Completion - Gradient from Orange to Red as days decrease */
+.days-to-completion {
+    font-weight: bold;
+}
+
+/* For Days left, we calculate the color in the PHP code */
+.days-to-completion-10-plus {
+    color: orange;
+    /* More than 10 days left */
+}
+
+.days-to-completion-5-to-10 {
+    color: #FF8C00;
+    /* Between 5 to 10 days left (orange-ish) */
+}
+
+.days-to-completion-0-to-5 {
+    color: red;
+    /* 5 or fewer days left (red) */
+}
+
+/* Apply specific styles for overdue text */
+.days-overdue {
+    color: red;
+}
+
+/* Styling for the conversation box */
+.conversation-box {
+    background-color: #f9f9f9;
+    /* Light grey background */
+    padding: 15px;
+    /* Padding inside the box */
+    border: 1px solid #ddd;
+    /* Light border around the box */
+    margin-bottom: 10px;
+    /* Space between boxes */
+    border-radius: 5px;
+    /* Slightly rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* Style for the small text for staff and contact names */
+.conversation-box small {
+    color: #555;
+    /* Darker grey color for small text */
+    font-size: 0.9em;
+    /* Slightly smaller font */
+}
+
+/* Optional: Add some hover effect for the 'Show More' link */
+.conversation-box a {
+    color: #007bff;
+    /* Blue color for links */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.conversation-box a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* Styling for each conversation entry */
+.conversation-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.conversation-box ul li {
+    margin-bottom: 10px;
+    /* Space between each conversation */
+}
+
+.conversation-box ul li p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* General container for the conversation details */
+.conversation-details {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.conversation-details h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Paragraph Styling */
+.conversation-details p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Form Styling */
+.conversation-details form {
+    margin-top: 20px;
+}
+
+.conversation-details form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.conversation-details form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.conversation-details form button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.conversation-details form button:hover {
+    background-color: #0056b3;
+}
+
+/* Success Message Styling */
+.conversation-details .message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #28a745;
+    text-align: center;
+}
+
+/* General Container */
+.link-conversations-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Lists */
+.staff-list,
+.contact-list,
+.linked-conversations-list,
+.available-conversations-list {
+    list-style: none;
+    padding: 0;
+}
+
+.staff-list li,
+.contact-list li,
+.linked-conversations-list li,
+.available-conversations-list li {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Conversation Radio */
+.conversation-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #DC3545;
+    color: #fff;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* Unlink Form Styling */
+.unlink-form {
+    display: inline;
+}
+
+.goal-box {
+    border: 1px solid #ddd;
+    /* Border around each goal box */
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    /* Light background color for each goal box */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.goal-box h5 {
+    margin-top: 0;
+}
+
+.conversation-section {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.conversation-display {
+    margin-bottom: 10px;
+}
+
+.link-conversation-button {
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+/*Calandar on the community page */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    /* Ensures cells maintain equal width */
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #ddd;
+    vertical-align: top;
+    /* Align content to the top of the cell */
+    text-align: left;
+    /* Align text to the left for readability */
+    padding: 5px;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.calendar-table th {
+    background-color: #0064aa;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.calendar-table td {
+    min-height: calc(100vh / 8);
+    /* Dynamically calculated height for each row */
+    height: auto;
+    /* Allows height to grow if content overflows */
+}
+
+.calendar-table td div.event {
+    font-size: 12px;
+    margin: 4px 0;
+    padding: 4px;
+    background-color: #96dbff;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    line-height: 1.4;
+}
+
+/* Calendar Navigation */
+.calendar-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.calendar-navigation button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-navigation button:hover {
+    background-color: #45a049;
+}
+
+.calendar-navigation #currentMonth {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .staff-details-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .staff-info p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .contact-item {
+        font-size: 14px;
+    }
+
+    .contact-link {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-details-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .conversation-item {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .event-edit-form {
+        padding: 15px;
+    }
+
+    .event-label {
+        font-size: 0.9rem;
+    }
+
+    .event-input,
+    .event-textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .goal-input {
+        font-size: 0.9rem;
+    }
+
+    .submit-button,
+    .delete-button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Facilities list styling */
+.facilities-list {
+    margin-top: 20px;
+}
+
+.facilities-list h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.facilities-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.facility-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.facility-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.facility-address {
+    font-size: 14px;
+    color: #555;
+}
+
+.facility-number {
+    font-size: 14px;
+    color: #555;
+}
+
+.facility-email {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.facility-email:hover {
+    text-decoration: underline;
+}
+
+/* Pagination Container */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Pagination Links */
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Active Page Style */
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Hover Effects */
+.pagination a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Disabled Button Style */
+.pagination a:disabled {
+    color: #ccc;
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+}
+
+/* First and Last Button Styling */
+.pagination a:first-child, .pagination a:last-child {
+    font-weight: bold;
+}
+
+.page-input-form {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.page-input-form input {
+    width: 60px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.page-input-form button {
+    padding: 5px 10px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}

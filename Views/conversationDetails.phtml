@@ -1,0 +1,20 @@
+<?php include_once "views/template/header.phtml"; ?>
+<div class="conversation-details">
+    <h1>Conversation Details</h1>
+
+    <p><strong>Staff Name:</strong> <?= htmlspecialchars($conversationDetails['staffName']) ?></p>
+    <p><strong>Contact Name:</strong> <?= htmlspecialchars($conversationDetails['contactName']) ?></p>
+
+    <form method="POST" action="">
+        <label for="summary"><strong>Summary:</strong></label><br>
+        <textarea id="summary" name="summary" rows="5" cols="50" class="textarea"><?= htmlspecialchars($conversationDetails['Summary']) ?></textarea><br><br>
+
+        <input type="hidden" name="conversationID" value="<?= htmlspecialchars($conversationDetails['ConversationID']) ?>">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
+    <?php if (!empty($message)): ?>
+        <p class="message"><?= htmlspecialchars($message) ?></p>
+    <?php endif; ?>
+</div>
+<?php include_once "views/template/footer.phtml"; ?>

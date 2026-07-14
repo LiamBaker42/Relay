@@ -1,0 +1,36 @@
+<?php include 'template/header.phtml'; ?>
+<!-- Lets the page be dynamic if editing or adding staff. -->
+<h1><?= $staff ? 'Update Staff' : 'Add New Staff' ?></h1>
+
+<!-- Staff details form -->
+<div class="staff-edit-container">
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<?= $staff ? htmlspecialchars($staff['Name']) : '' ?>" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="<?= $staff ? htmlspecialchars($staff['Email']) : '' ?>" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone" value="<?= $staff ? htmlspecialchars($staff['Phone']) : '' ?>" required><br>
+
+        <!-- Staff Type Dropdown -->
+        <label for="typeId">Staff Type:</label>
+        <select name="typeId" id="typeId" required>
+            <?php foreach ($staffTypes as $type): ?>
+                <option value="<?= $type['TypeID']; ?>" <?= ($staff && $staff['TypeID'] == $type['TypeID']) ? 'selected' : ''; ?>>
+                    <?= htmlspecialchars($type['Type']); ?>
+                </option>
+            <?php endforeach; ?>
+        </select><br>
+        <!-- Submit button also dynamic -->
+        <button type="submit"><?= $staff ? 'Update Staff' : 'Add Staff' ?></button>
+        <?php if ($staff): ?>
+            <!-- Delete Button for editing staff -->
+            <form method="POST">
+                <button type="submit" name="action" value="delete" style="background-color: red; color: white;">Delete Staff</button>
+            </form>
+        <?php endif; ?>
+    </form>
+</div>
+<?php include 'template/footer.phtml' ?>

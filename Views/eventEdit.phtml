@@ -1,0 +1,43 @@
+<?php
+include 'template/header.phtml';
+?>
+<form method="post" action="" class="event-edit-form">
+    <input type="hidden" name="eventId" value="<?= htmlspecialchars($eventId) ?>">
+
+    <div class="form-group">
+        <label for="date" class="event-label">Event Date:</label>
+        <input type="datetime-local" name="date" id="date" value="<?= isset($event['EventTime']) ? date('Y-m-d\TH:i', strtotime($event['EventTime'])) : '' ?>" required class="event-input">
+    </div>
+    <div class="form-group">
+        <label for="description" class="event-label">Event Description:</label>
+        <textarea name="description" id="description" class="event-textarea"><?= htmlspecialchars($event['EventDetails'] ?? '') ?></textarea>
+    </div>
+
+    <!-- Goals Section -->
+    <div class="form-group">
+        <label class="event-label">Goals:</label>
+        <ul id="goalList" class="goal-list">
+            <?php foreach ($goals as $goal): ?>
+                <li class="goal-item">
+                    <input type="text" name="goals[]" value="<?= htmlspecialchars($goal['Goals']) ?>" placeholder="Enter goal" class="goal-input" required>
+                    <button type="button" class="remove-goal goal-button">Remove</button>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <button type="button" id="addGoal" class="goal-button">Add Goal</button>
+    </div>
+
+    <!-- Submit Buttons -->
+    <div class="form-actions">
+        <button type="submit" class="submit-button">Save</button>
+        <?php if ($eventId): ?>
+            <button type="submit" name="action" value="delete" class="delete-button">Delete Event</button>
+        <?php endif; ?>
+    </div>
+</form>
+
+<script src="/js/eventEdit.js"></script> <!-- Include the external JavaScript file -->
+
+<?php
+include 'template/footer.phtml';
+?>
